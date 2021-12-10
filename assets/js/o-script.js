@@ -1,5 +1,5 @@
 $(function() {
-   console.log("o-script helper v.1.1")
+   console.log("o-script helper v.0.0")
 })
 
 $(document).on('click', '#btn-logout', function(e) {
