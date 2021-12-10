@@ -1,5 +1,5 @@
 $(function() {
-   console.log('ozhora-helper')
+   console.log('ozhoras-helper')
 })
 
 $(document).on('click', '#btn-logout', function(e) {
