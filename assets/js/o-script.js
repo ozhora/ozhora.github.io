@@ -1,5 +1,5 @@
 $(function() {
-   console.log('ozhora-helper')
+   console.log("ozhora's helper v.0.1")
 })
 
 $(document).on('click', '#btn-logout', function(e) {
@@ -258,6 +258,5 @@ function get_age(date) {
    if(age < 0){
       age = 0;
    }
-   console.log('result: '+age)
    return age;
  }
