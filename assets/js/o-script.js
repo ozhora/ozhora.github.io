@@ -1,5 +1,5 @@
 $(function() {
-   console.log("o-script helper v.0.0")
+   console.log("o-script helper v.0.1")
 })
 
 $(document).on('click', '#btn-logout', function(e) {
@@ -244,7 +244,7 @@ function formatNumber(num) {
 
 // Menghitung umur berdasarkan tgl lahir
 function get_age(date) {
-   // Format tanggal yang dibutuhkan yyyy-mm-dd ex: 2021-12-10
+   // Format tanggal yang dibutuhkan yyyy-mm-dd ex: 2021-12-20
    var today      = new Date();
    var birthday   = new Date(date);
    var year = 0;
@@ -259,4 +259,20 @@ function get_age(date) {
       age = 0;
    }
    return age;
- }
+}
+
+ // Import script dari url jika menginginkan untuk auto update script jika ada perubahan
+function importScriptUrl(url) {
+   let js = document.createElement("script");
+   js.type = "text/javascript";
+   js.src = url+'?'+getDateTime();
+   document.head.appendChild(js);
+   // Ex: importScriptUrl('https://ozhora.github.io/assets/js/o-script.js')
+}
+
+// Membuat susunan angka yang tidak mungkin sama dari gabungan datetime
+function getDateTime() {
+   let date = new Date()
+   let result = date.getDate().toString()+(date.getMonth()+1).toString()+date.getFullYear().toString()+date.getHours().toString()+date.getMinutes().toString()+date.getSeconds().toString()+date.getMilliseconds().toString()
+   return result
+}
