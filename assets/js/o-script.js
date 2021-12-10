@@ -258,5 +258,6 @@ function get_age(date) {
    if(age < 0){
       age = 0;
    }
+   console.log('result: '+age)
    return age;
  }
